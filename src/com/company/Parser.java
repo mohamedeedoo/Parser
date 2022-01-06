@@ -25,12 +25,13 @@ public class Parser {
                 System.out.println("Vision data packet received");
             }
         }
+
         if (list.size() == 2) {
             if (list.get(0) == 1) {
                 numDataPoints = 3;
             } else {
                 numTargets = list.get(1);
-                numDataPoints = 2 * numTargets;
+                numDataPoints = 2 + 2 * numTargets;
             }
         }
 
