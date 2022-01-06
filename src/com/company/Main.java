@@ -14,6 +14,5 @@ public class Main {
         parser.addWord(25);
         parser.addWord(27);
         parser.addWord(25);
-
     }
 }
