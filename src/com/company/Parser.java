@@ -1,17 +1,22 @@
 package com.company;
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class Parser {
-    private ArrayList<Integer> list;
-    private int numTargets;
-    private int numDataPoints;
 
+    private ArrayList<Integer> list; // Keeps track of words passed into the parser
+    private int numTargets; // Keeps track of number of vision targets
+    private int numDataPoints; // Keeps track of number of data points
+
+    // Constructs a new parser object with empty arraylist
     public Parser() {
         list = new ArrayList<>();
 
     }
 
+    // This method takes in a single int, when called continuosly it outputs data packets
+    // based on the specified protocol
+    // Parameter word - int to be parsed
+    // returns packet data if packet has been fully received, null otherwise
     public ArrayList<Integer> addWord(int word) {
         if (list.size() == 1) {
             if (list.get(0) == 1) {
